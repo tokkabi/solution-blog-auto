@@ -16,7 +16,7 @@ class Config(BaseSettings):
     openai_model: str = "gpt-4o-mini"
 
     openrouter_api_key: str = ""
-    openrouter_model: str = "openai/gpt-4o-mini"
+    openrouter_model: str = "deepseek/deepseek-chat-v3-0324:free"
 
     glm_api_key: str = ""
     glm_model: str = "glm-4-flash"

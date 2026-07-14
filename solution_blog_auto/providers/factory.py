@@ -15,9 +15,14 @@ class ProviderFactory:
         """Create a provider for the configured LLM provider name."""
         provider_name = settings.llm_provider.lower()
 
+        if provider_name == "openrouter":
+            return OpenRouterProvider(
+                api_key=settings.openrouter_api_key,
+                model=settings.openrouter_model,
+            )
+
         providers: dict[str, type[Provider]] = {
             "openai": OpenAIProvider,
-            "openrouter": OpenRouterProvider,
             "glm": GLMProvider,
             "gemini": GeminiProvider,
             "ollama": OllamaProvider,

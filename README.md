@@ -142,3 +142,18 @@ Codex
 # 라이선스
 
 Private Project
+
+---
+
+## Sprint 3B OpenRouter MVP
+
+Set the OpenRouter provider in `.env` before running the MVP workflow.
+
+```
+LLM_PROVIDER=openrouter
+OPENROUTER_API_KEY=your-openrouter-api-key
+OPENROUTER_MODEL=deepseek/deepseek-chat-v3-0324:free
+```
+
+The workflow returns its result without printing. `main.py` prints the topic,
+research result, and final Markdown article.
