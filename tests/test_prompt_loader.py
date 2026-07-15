@@ -10,7 +10,15 @@ def test_prompt_loader_loads_from_project_root(monkeypatch, tmp_path) -> None:
     monkeypatch.chdir(tmp_path)
     loader = PromptLoader()
 
-    prompt = loader.load("research.md", topic="ETF")
+    prompt = loader.load(
+        "research.md",
+        topic="ETF",
+        purpose="조사 목적",
+        audience="독자",
+        content_direction="방향",
+        must_include=[],
+        avoid=[],
+    )
 
     assert "ETF" in prompt
 
