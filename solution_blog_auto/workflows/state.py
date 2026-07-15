@@ -6,5 +6,6 @@ class BlogState(TypedDict, total=False):
 
     topic: str
     research: str
+    contract_name: str
     article: str
     publish_result: str

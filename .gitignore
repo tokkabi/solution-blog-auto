@@ -11,7 +11,11 @@ __pycache__/
 # IDE
 .vscode/
 .idea/
+.zcode/
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Runtime
+runtime/contract_state.json

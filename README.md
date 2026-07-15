@@ -157,3 +157,15 @@ OPENROUTER_MODEL=deepseek/deepseek-chat-v3-0324:free
 
 The workflow returns its result without printing. `main.py` prints the topic,
 research result, and final Markdown article.
+
+---
+
+# Research First
+
+이 프로젝트에서 가장 중요한 것은 Research 품질이다.
+
+Writer는 Research를 기반으로 글을 작성할 뿐이다.
+
+새로운 기능을 추가할 때는 Writer보다 Research를 우선적으로 개선한다.
+
+Research는 지속적으로 확장 가능한 Pipeline 구조를 유지한다.

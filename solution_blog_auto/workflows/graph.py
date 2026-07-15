@@ -6,12 +6,17 @@ from solution_blog_auto.workflows.nodes import PublisherNode, ResearchNode, Writ
 from solution_blog_auto.workflows.state import BlogState
 
 
-def create_blog_graph() -> Any:
-    """Create the MVP blog workflow graph."""
+def create_blog_graph(writer_node: WriterNode | None = None) -> Any:
+    """Create the MVP blog workflow graph.
+
+    Args:
+        writer_node: Optional pre-built writer node, useful for injecting fakes
+            in tests. When omitted, a default :class:`WriterNode` is used.
+    """
     graph = StateGraph(BlogState)
 
     graph.add_node("research", ResearchNode())
-    graph.add_node("writer", WriterNode())
+    graph.add_node("writer", writer_node or WriterNode())
     graph.add_node("publisher", PublisherNode())
 
     graph.add_edge(START, "research")
